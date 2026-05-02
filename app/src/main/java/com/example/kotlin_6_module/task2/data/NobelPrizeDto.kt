@@ -1,4 +1,4 @@
-package com.example.kotlin_6_module.data
+package com.example.kotlin_6_module.task2.data
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

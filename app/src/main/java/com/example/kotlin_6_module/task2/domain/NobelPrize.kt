@@ -1,4 +1,4 @@
-package com.example.kotlin_6_module.domain
+package com.example.kotlin_6_module.task2.domain
 
 data class Laureate(
     val fullName: String,

@@ -1,4 +1,4 @@
-package com.example.kotlin_6_module.presentation
+package com.example.kotlin_6_module.task2.presentation
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.example.kotlin_6_module.domain.NobelPrize
+import com.example.kotlin_6_module.task2.domain.NobelPrize
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

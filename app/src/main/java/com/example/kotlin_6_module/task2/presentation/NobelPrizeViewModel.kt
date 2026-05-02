@@ -1,12 +1,12 @@
-package com.example.kotlin_6_module.presentation
+package com.example.kotlin_6_module.task2.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.kotlin_6_module.task2.data.nobelPrizeHttpClient
 import com.example.kotlin_6_module.task2.data.NobelPrizeApi
-import com.example.kotlin_6_module.data.NobelPrizeRepositoryImpl
+import com.example.kotlin_6_module.task2.data.NobelPrizeRepositoryImpl
 import com.example.kotlin_6_module.task2.domain.GetPrizesUseCase
-import com.example.kotlin_6_module.domain.NobelPrize
+import com.example.kotlin_6_module.task2.domain.NobelPrize
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

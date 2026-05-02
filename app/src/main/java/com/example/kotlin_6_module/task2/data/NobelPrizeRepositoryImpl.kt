@@ -1,9 +1,8 @@
-package com.example.kotlin_6_module.data
+package com.example.kotlin_6_module.task2.data
 
-import com.example.kotlin_6_module.domain.Laureate
-import com.example.kotlin_6_module.domain.NobelPrize
-import com.example.kotlin_6_module.domain.NobelPrizeRepository
-import com.example.kotlin_6_module.task2.data.NobelPrizeApi
+import com.example.kotlin_6_module.task2.domain.Laureate
+import com.example.kotlin_6_module.task2.domain.NobelPrize
+import com.example.kotlin_6_module.task2.domain.NobelPrizeRepository
 
 class NobelPrizeRepositoryImpl(private val api: NobelPrizeApi) : NobelPrizeRepository {
 

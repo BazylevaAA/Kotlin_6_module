@@ -1,4 +1,4 @@
-package com.example.kotlin_6_module.presentation
+package com.example.kotlin_6_module.task2.presentation
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.kotlin_6_module.domain.NobelPrize
+import com.example.kotlin_6_module.task2.domain.NobelPrize
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

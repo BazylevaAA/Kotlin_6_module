@@ -1,6 +1,5 @@
 package com.example.kotlin_6_module.task2.data
 
-import com.example.kotlin_6_module.data.NobelPrizesResponse
 import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.request.*
