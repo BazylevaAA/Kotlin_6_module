@@ -8,22 +8,16 @@ import io.ktor.server.response.*
 fun Application.configureStatusPages() {
     install(StatusPages) {
         exception<Throwable> { call, cause ->
-            call.respondText(
-                text = "500: ${cause.message}",
-                status = HttpStatusCode.InternalServerError
+            call.respond(
+                HttpStatusCode.InternalServerError,
+                mapOf("error" to (cause.message ?: "Internal server error"))
             )
         }
-        status(HttpStatusCode.NotFound) { call, status ->
-            call.respondText(
-                text = "404: Not Found",
-                status = status
-            )
+        status(HttpStatusCode.NotFound) { call, _ ->
+            call.respond(HttpStatusCode.NotFound, mapOf("error" to "Not found"))
         }
-        status(HttpStatusCode.Unauthorized) { call, status ->
-            call.respondText(
-                text = "401: Unauthorized",
-                status = status
-            )
+        status(HttpStatusCode.Unauthorized) { call, _ ->
+            call.respond(HttpStatusCode.Unauthorized, mapOf("error" to "Unauthorized"))
         }
     }
 }

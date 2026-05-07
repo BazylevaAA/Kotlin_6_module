@@ -1,9 +1,9 @@
 package com.example.domain.usecase
 
 import com.example.domain.model.NobelPrize
-import com.example.domain.repository.NobelPrizeRepository
+import com.example.domain.repository.PrizeRepository
 
-class GetPrizeDetailUseCase(private val repository: NobelPrizeRepository) {
-    operator fun invoke(year: String, category: String): NobelPrize? =
-        repository.getByYearAndCategory(year, category)
+class GetPrizeUseCase(private val prizeRepository: PrizeRepository) {
+    suspend fun execute(year: Int, category: String): NobelPrize? =
+        prizeRepository.getPrize(year, category)
 }
