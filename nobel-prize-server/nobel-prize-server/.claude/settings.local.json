@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(unzip -l /c/Users/Huawei/.gradle/caches/modules-2/files-2.1/io.github.smiley4/ktor-swagger-ui/3.3.0/4908074868890894ef7ba5247a9afc7ab64d01c6/ktor-swagger-ui-3.3.0.jar)"
+    ]
+  }
+}
