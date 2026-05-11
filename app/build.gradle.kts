@@ -78,4 +78,5 @@ dependencies {
 
     // DataStore
     implementation(libs.androidx.datastore.preferences)
+    implementation(libs.ktor.client.auth)
 }

@@ -19,7 +19,9 @@ class PrizeController(
     fun configure(routing: Routing) {
         routing.authenticate("auth-jwt") {
             get("/prizes") {
-                val prizes = getPrizesUseCase.execute()
+                val year = call.request.queryParameters["year"]?.toIntOrNull()
+                val category = call.request.queryParameters["category"]
+                val prizes = getPrizesUseCase.execute(year, category)
                 call.respond(prizes)
             }
 

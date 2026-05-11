@@ -31,9 +31,12 @@ class PrizeRepositoryImpl : PrizeRepository {
         portraitUrl = this[LaureateTable.portraitUrl]
     )
 
-    override suspend fun getAllPrizes(): List<NobelPrize> =
+    override suspend fun getAllPrizes(year: Int?, category: String?): List<NobelPrize> =
         newSuspendedTransaction {
-            PrizeTable.selectAll().map { it.toPrize() }
+            var query = PrizeTable.selectAll()
+            if (year != null) query = query.andWhere { PrizeTable.awardYear eq year }
+            if (category != null) query = query.andWhere { PrizeTable.category eq category }
+            query.map { it.toPrize() }
         }
 
     override suspend fun getPrize(year: Int, category: String): NobelPrize? =
